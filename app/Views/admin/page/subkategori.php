@@ -155,7 +155,7 @@
         var data_id = $(this).attr('data-id');
         $("#form-sub-kategori-edit input[name=id_sub_kategori]").val(data_id);
         $.ajax({
-            url : "/admin/sub-kategori/"+data_id,
+            url : "/admin/sub-kategori/"+data_id+"/detail",
             headers: {'X-Requested-With': 'XMLHttpRequest'},
             type: "GET",
             data: null,

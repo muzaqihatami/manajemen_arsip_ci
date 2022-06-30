@@ -55,12 +55,12 @@ $routes->group('admin', function($routes){
 	$routes->post('agenda/surat-masuk/filter', 'SuratMasuk::agenda_filter');
 	$routes->get('agenda/surat-masuk/download', 'SuratMasuk::agenda_download');
 
-	$routes->get('kategori/(:any)', 'Kategori::get/$1');
+	$routes->get('kategori/(:any)/detail', 'Kategori::get/$1');
     $routes->post('kategori', 'Kategori::insert');
 	$routes->post('kategori/(:any)/edit', 'Kategori::edit/$1');
 	$routes->get('kategori/(:any)/delete', 'Kategori::delete/$1');
 
-	$routes->get('sub-kategori/(:any)', 'SubKategori::get/$1');
+	$routes->get('sub-kategori/(:any)/detail', 'SubKategori::get/$1');
     $routes->post('sub-kategori', 'SubKategori::insert');
 	$routes->post('sub-kategori/(:any)/edit', 'SubKategori::edit/$1');
 	$routes->get('sub-kategori/(:any)/delete', 'SubKategori::delete/$1');

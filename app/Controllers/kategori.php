@@ -27,7 +27,7 @@ class Kategori extends BaseController
             $total_kategori = $model->countAll();
             
             $model->insert([
-                "id_kategori" => 'KTG'.sprintf("%02d", $total_kategori+1),
+                "id_kategori" => 'KTG'.sprintf("%03d", $total_kategori+1),
                 "kategori" => $this->request->getPost('kategori'),
                 "format_no" => $this->request->getPost('format_no'),
                 "inisial" => $this->request->getPost('inisial')

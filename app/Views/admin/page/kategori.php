@@ -139,7 +139,7 @@
     $('.data-edit-btn').click(function () {
         var data_id = $(this).attr('data-id');
         $.ajax({
-            url : "/admin/kategori/"+data_id,
+            url : "/admin/kategori/"+data_id+"/detail",
             headers: {'X-Requested-With': 'XMLHttpRequest'},
             type: "GET",
             data: null,
