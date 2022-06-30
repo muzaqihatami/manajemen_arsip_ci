@@ -208,4 +208,27 @@
                 });
             });
         });
+
+        $("#form-sub-kategori-edit").submit(function (e) {
+            e.preventDefault();    
+            var formData = new FormData(this);
+            $.ajax({
+                url : "/admin/sub-kategori/"+$("#form-sub-kategori-edit input[name=id_sub_kategori]").val()+"/edit",
+                headers: {'X-Requested-With': 'XMLHttpRequest'},
+                type: "POST",
+                data: formData,
+                dataType: "JSON",
+                processData: false,
+                contentType: false,
+                success: function(data)
+                {
+                    $('#exampleModal').modal('hide');
+                    location.reload();
+                },
+                error: function (e)
+                {
+                    console.log(e.responseJSON)
+                }
+            });
+        });
 </script>

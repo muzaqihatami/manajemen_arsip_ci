@@ -173,7 +173,7 @@
         e.preventDefault();    
         var formData = new FormData(this);
         $.ajax({
-            url : "/admin/kategori/"+$("#form-edit-kategori input[name=id_kategori]").val()+"/update",
+            url : "/admin/kategori/"+$("#form-edit-kategori input[name=id_kategori]").val()+"/edit",
             headers: {'X-Requested-With': 'XMLHttpRequest'},
             type: "POST",
             data: formData,

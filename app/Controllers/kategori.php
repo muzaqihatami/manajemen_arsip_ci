@@ -58,7 +58,11 @@ class Kategori extends BaseController
             ->set("inisial", $this->request->getPost('inisial'))
             ->update();
 
-        return redirect()->to('/kategori'); 
+            $resp = array(
+                'message' => 'success'
+            );
+    
+            return $this->response->setJSON($resp);
     }
 
     public function delete($id)

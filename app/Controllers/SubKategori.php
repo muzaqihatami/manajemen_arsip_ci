@@ -137,6 +137,6 @@ class SubKategori extends BaseController
         $model->where("id_sub_kategori", $id)
             ->delete();
 
-        return redirect()->to('/kategori/'+$kat->kategori); 
+        return redirect()->to('/kategori/'.$kat->kategori); 
     }
 }
