@@ -28,10 +28,10 @@ class Admin extends BaseController
         $timenow = new Time('now');
 
         $model_agenda_sm = new ModelAgendaSuratMasuk();
-        $data_agenda_sm = $model_agenda_sm->join('surat_masuk', 'surat_masuk.id_surat = agenda_srt_msk.id_surat')->where("agenda_srt_msk.is_deleted", 0)->limit(4)->findAll();
+        $data_agenda_sm = $model_agenda_sm->join('surat_masuk', 'surat_masuk.id_surat = agenda_srt_msk.id_surat')->where("agenda_srt_msk.is_deleted", 0)->limit(4)->get()->getResultArray();
 
         $model_agenda_sk = new ModelAgendaSuratKeluar();
-        $data_agenda_sk = $model_agenda_sk->join('surat_keluar', 'surat_keluar.id_surat = agenda_srt_keluar.id_surat')->join('kategori_surat','surat_keluar.id_kategori = kategori_surat.id_kategori')->limit(4)->findAll();
+        $data_agenda_sk = $model_agenda_sk->join('surat_keluar', 'surat_keluar.id_surat = agenda_srt_keluar.id_surat')->join('kategori_surat','surat_keluar.id_kategori = kategori_surat.id_kategori')->limit(4)->get()->getResultArray();
 
         $month = date("F",strtotime($timenow));
 

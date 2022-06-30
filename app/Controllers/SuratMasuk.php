@@ -43,7 +43,7 @@ class SuratMasuk extends BaseController
                 
                         $suratmasuk = $model->insert([
                             "id_admin" => 'ADM001',
-                            "id_surat" => 'SM'.date("y").sprintf("%03d", $total_surat+1),
+                            "id_surat" => 'SM'.date("y").sprintf("%04d", $total_surat+1),
                             "tgl_surat" => $this->request->getPost('tanggal_surat'),
                             "no_surat" => $this->request->getPost('no_surat'),
                             "pengirim" => $this->request->getPost('pengirim'),
